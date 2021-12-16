@@ -124,7 +124,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="80dp"
+        android:buttonTint="@color/design_default_color_error"
         android:text="I am not a robot"
+        android:textColorLink="@color/teal_200"
         app:layout_constraintEnd_toStartOf="@+id/imgRefresh"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
