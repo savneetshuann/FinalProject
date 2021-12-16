@@ -31,6 +31,8 @@ public class Register extends AppCompatActivity {
         email=findViewById(R.id.txtEmail);
         mDatabase = new DatabaseHelper(this);
 
+
+
        save.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
