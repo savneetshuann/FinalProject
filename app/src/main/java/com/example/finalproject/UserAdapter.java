@@ -66,39 +66,6 @@ public class UserAdapter extends ArrayAdapter {
         //tvImg.setImageResource(user.getImage());
         return v;
     }
-    /*
-        //try
-        int[] images = new int[] {R.drawable.icon01_01, R.drawable.icon01_02, R.drawable.icon01_03,R.drawable.icon01_04, R.drawable.icon01_05, R.drawable.icon01_06,
-                R.drawable.icon01_07, R.drawable.icon01_08, R.drawable.icon01_09,R.drawable.icon01_10, R.drawable.icon01_11, R.drawable.icon01_12,
-                R.drawable.icon01_13, R.drawable.icon01_14, R.drawable.icon01_15,R.drawable.icon01_16, R.drawable.icon01_17, R.drawable.icon01_18};
-        ImageView mImageView = v.findViewById(R.id.imgUser);
-
-        int imageId = (int)(Math.random() * images.length);// Get a random between 0 and images.length-1
-        mImageView.setBackgroundResource(images[imageId]);// Set the image
-
-         */
-
-
-
-//    @Override
-//    public View getView(int i, View view, ViewGroup viewGroup) {
-//        ViewHolder holder;
-//        if(view==null){
-//            view=inflater.inflate(R.layout.list_row,null);
-//            holder=new ViewHolder();
-//            holder.name=view.findViewById(R.id.txvName);
-//            holder.phone=view.findViewById(R.id.txvPhone);
-//            holder.email=view.findViewById(R.id.txvEmail);
-//            view.setTag(holder);
-//        }
-//        else
-//            holder=(ViewHolder) view.getTag();
-//        holder.name.setText(users.get(i).getName());
-//        holder.phone.setText(users.get(i).getPhone());
-//        holder.email.setText(users.get(i).getEmail());
-//        return view;
-//    }
-
 
     private void loadEmployees() {
         Cursor cursor = mDatabase.getAllUsers();

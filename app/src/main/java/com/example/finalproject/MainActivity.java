@@ -59,12 +59,6 @@ public class MainActivity extends AppCompatActivity {
             } while (cursor.moveToNext());
             cursor.close();
 
-            // show items in a listView
-            // we use a custom adapter to show employees
-
-            //UserAdapter userAdapter = new UserAdapter(this, R.layout.list_row, userList, mDatabase);
-//            UserAdapter userAdapter = new UserAdapter(this,userList, mDatabase);
-//            lv.setAdapter(userAdapter);
             lv.setAdapter(new UserAdapter(this,R.layout.list_row,userList,mDatabase));
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -76,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     in.putExtra("email", userList.get(i).getEmail());
                     in.putExtra("image",Utility.getBytes(userList.get(i).getImage()) );
                     startActivity(in);
-                   // iv.setImageResource(carList.get(i).getImage());
                 }
             });
         }
