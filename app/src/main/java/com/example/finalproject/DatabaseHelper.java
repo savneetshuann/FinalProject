@@ -49,7 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    boolean addEmployee(String name,String phone,String email,Bitmap image) {
+    boolean addUsers(String name,String phone,String email,Bitmap image) {
 
         // in order to insert items into database, we need a writable database
         // this method returns a SQLite database instance
@@ -75,23 +75,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         return sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
-
-//    boolean updateEmployee(int id, String name, String dept, double salary) {
-//        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-//
-//        ContentValues cv = new ContentValues();
-//        cv.put(COLUMN_NAME, name);
-//        cv.put(COLUMN_DEPT, dept);
-//        cv.put(COLUMN_SALARY, String.valueOf(salary));
-//
-//        // this method returns the number of rows affected
-//        return sqLiteDatabase.update(TABLE_NAME, cv, COLUMN_ID + "=?", new String[]{String.valueOf(id)}) > 0;
-//    }
-//    boolean deleteEmployee(int id) {
-//        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-//        // the delete method returns the number of rows affected
-//        return sqLiteDatabase.delete(TABLE_NAME, COLUMN_ID + "=?", new String[]{String.valueOf(id)}) > 0;
-//    }
-
 
 }

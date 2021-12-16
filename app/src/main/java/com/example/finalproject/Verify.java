@@ -134,8 +134,7 @@ public class Verify extends AppCompatActivity {
                             .setCancelable(false)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    //Todo
-                                    addEmployee();
+                                    addUser();
                                     Intent intent2 = new Intent(Verify.this, MainActivity.class);
                                     startActivity(intent2);
                                 }
@@ -255,7 +254,7 @@ public class Verify extends AppCompatActivity {
         }
     }
 
-    private void addEmployee() {
+    private void addUser() {
         System.out.println("in add" + Register.tName);
         int[] images = new int[]{R.drawable.icon01_01, R.drawable.icon01_02, R.drawable.icon01_03, R.drawable.icon01_04, R.drawable.icon01_05, R.drawable.icon01_06,
                 R.drawable.icon01_07, R.drawable.icon01_08, R.drawable.icon01_09, R.drawable.icon01_10, R.drawable.icon01_11, R.drawable.icon01_12,
@@ -268,7 +267,7 @@ public class Verify extends AppCompatActivity {
         Bitmap img = BitmapFactory.decodeResource(getResources(), images[imageId]);// Set the image
 
 
-        if (mDatabase.addEmployee(Register.tName, Register.tPhone, Register.tEmail, img))
+        if (mDatabase.addUsers(Register.tName, Register.tPhone, Register.tEmail, img))
             Toast.makeText(this, "User Registered", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(this, "User not Registered", Toast.LENGTH_SHORT).show();
