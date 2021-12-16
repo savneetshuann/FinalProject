@@ -31,13 +31,10 @@ public class Register extends AppCompatActivity {
         email=findViewById(R.id.txtEmail);
         mDatabase = new DatabaseHelper(this);
 
-
-
        save.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                emptyCheck();
-
                tName=name.getText().toString().trim();
                tPhone=phone.getText().toString().trim();
                tEmail=email.getText().toString().trim();
@@ -51,9 +48,6 @@ public class Register extends AppCompatActivity {
                }
            }
        });
-
-
-
     }
     private void emptyCheck()
     {
